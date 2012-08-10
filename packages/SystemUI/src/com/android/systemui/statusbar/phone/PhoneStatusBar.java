@@ -400,14 +400,14 @@ public class PhoneStatusBar extends BaseStatusBar {
             mCurrentTheme = (CustomTheme)currentTheme.clone();
         }
 
+        SettingsObserver observer = new SettingsObserver(mHandler);
+        observer.observe();
+
         super.start(); // calls createAndAddWindows()
 
         addNavigationBar();
 
         if (ENABLE_INTRUDERS) addIntruderView();
-
-        SettingsObserver observer = new SettingsObserver(mHandler);
-        observer.observe();
 
         // Lastly, call to the icon policy to install/update all the icons.
         mIconPolicy = new PhoneStatusBarPolicy(mContext);
