@@ -934,7 +934,7 @@
             16 - App switch
          For example, a device with Home, Back and Menu keys would set this
          config to 7. -->
-    <!-- <integer name="config_deviceHardwareKeys">15</integer> -->
+    <integer name="config_deviceHardwareKeys">15</integer>
 
     <!-- If a dock provides a lid switch, that lid can be removed. This
          setting is used to determine, whether lidOpenRotation has to be
